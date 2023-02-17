@@ -24,3 +24,4 @@ yarn-error.log*
 
 #Secret file
 .env
+.env.development
