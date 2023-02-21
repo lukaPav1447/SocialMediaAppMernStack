@@ -4,7 +4,8 @@ import { AppBar, Avatar, Button, Toolbar, Typography } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import decode from 'jwt-decode';
 import useStyles from "./styles";
-import memories from "../../images/memories.png";
+import memoriesLogo from "../../images/logoLeptira.jpg";
+import memoriesText from "../../images/textLogo6EscappeCrna.jpg";
 
 const Navbar = () => {
   const classes = useStyles();
@@ -36,17 +37,15 @@ const Navbar = () => {
 
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
-      <div className={classes.brandContainer}>
-        <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">
-          escAppe
-        </Typography>
+      <Link to="/" className={classes.brandContainer}>
+        <img src={memoriesText} alt="icon" height="55px"/>
         <img
           className={classes.image}
-          src={memories}
+          src={memoriesLogo}
           alt="memories"
-          height="60"
+          height="60px"
         />
-      </div>
+      </Link>
       <Toolbar className={classes.toolbar}>
         {user ? (
             <div className={classes.profile}>
